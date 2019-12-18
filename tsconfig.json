@@ -1,7 +1,9 @@
 {
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
+    "esModuleInterop": true,
     "experimentalDecorators": true,
+    "lib": ["dom","es2016"],
     "outDir": ".build",
     "rootDir": ".",
     "skipLibCheck": true,
