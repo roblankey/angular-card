@@ -1,0 +1,10 @@
+<form class="card-form">
+  <mat-form-field class="card-full-width">
+    <input type="text" placeholder="Search Cards" aria-label="Search Cards" matInput [formControl]="searchControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption [displayWith]="displayFn">
+      <mat-option *ngFor="let result of filteredResults | async" [value]="result" (onSelectionChange)="showCardDetails(result)">
+        {{result.title}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
